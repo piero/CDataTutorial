@@ -45,14 +45,26 @@ int main(int argc, char *arv[])
 
 
 	// Binary tree
-	tree_display(t); printf("\n");
+	tree_display(t);
+	printf("\n");
 
 	tree_insert(&t, 10);
-	tree_display(t); printf("\n");
+	tree_display(t);
+	printf("\n");
 
 	tree_insert(&t, 8);
 	tree_insert(&t, 11);
-	tree_display(t); printf("\n");
+	tree_display(t);
+	printf("\n");
 
+	tree_insert(&t, 4);
+	tree_insert(&t, 3);
+	tree_display(t);
+	printf("\n");
+
+	tree_insert(&t, 15);
+	tree_insert(&t, 14);
+	tree_display(t);
+	printf("\n");
 	return 0;
 }

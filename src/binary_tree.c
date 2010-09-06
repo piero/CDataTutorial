@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+static unsigned int level = 0;
+
 void tree_insert(TreeNode_t **t, int num)
 {
 	TreeNode_t *curr = *t;
@@ -35,9 +37,11 @@ void tree_display(TreeNode_t *t)
 	if (t != NULL)
 	{
 		tree_display((TreeNode_t*)t->left);
-		printf("%d ", t->data);
+		printf("%d [%d]; ", t->data, ++level);
 		tree_display((TreeNode_t*)t->right);
 	}
 	else
-		printf("- ");
+		printf("- [%d]; ", ++level);
+
+	--level;
 }
