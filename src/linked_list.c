@@ -8,7 +8,7 @@
 #include "linked_list.h"
 #include <stdlib.h>
 
-void append(Node_t **q, int num)
+void list_append(Node_t **q, int num)
 {
 	Node_t *temp = NULL, *r = NULL;
 
@@ -33,7 +33,7 @@ void append(Node_t **q, int num)
 	}
 }
 
-void del(Node_t **q, int num)
+void list_remove(Node_t **q, int num)
 {
 	if (*q == NULL)
 	{
@@ -69,7 +69,7 @@ void del(Node_t **q, int num)
 	printf("Couldn't find %d in the list.\n", num);
 }
 
-void display(Node_t *q)
+void list_display(Node_t *q)
 {
 	printf("[ ");
 	if (q == NULL)
@@ -86,7 +86,7 @@ void display(Node_t *q)
 	printf("]\n");
 }
 
-unsigned int count(Node_t *q)
+unsigned int list_count(Node_t *q)
 {
 	unsigned int counter = 0;
 

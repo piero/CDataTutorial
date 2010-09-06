@@ -16,9 +16,9 @@ typedef struct node_t
 	struct node_t *next;
 } Node_t;
 
-void append(Node_t **, int);
-void del(Node_t **, int);
-unsigned int count(Node_t *);
-void display(Node_t *);
+void list_append(Node_t **, int);
+void list_remove(Node_t **, int);
+unsigned int list_count(Node_t *);
+void list_display(Node_t *);
 
 #endif /* LINKED_LIST_H_ */
